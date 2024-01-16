@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Norse Bold";
+  src: url("/Norse-Bold.otf") format("otf");
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url(/right.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  width: 25%;
+  height: 100%;
+  background: url(/left-bg.avif);
+  background: linear-gradient(to left, rgba(0,0,0,0.01), rgba(0,0,0,0.4));
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  padding: 200px 0 10px 0;
+  border-right: 4px dotted rgba(0,0,0,0.9);
+}
+.left h1 {
+  display: flex;
+  font-family: "Bungee Spice", system-ui;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 4px;
+  color: #fff;
+  /* background-color: rgba(0, 0, 0, 0.471); */
+  background: linear-gradient(to left, rgba(0,0,0,0.01), rgba(0,0,0,0.4));
+  font-size: 50px;
+}
+
+.left h1 img {
+  width: 64px;
+}
+
+.left p {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.left p a {
+  color: whitesmoke;
+}
+
+.right {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 40px;
+  margin-top: 20px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.right p:first-child {
+  margin-top: 120px;
+  margin-right: 170px;
+}
+.form {
+  background: #0000004f;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  height: 300px;
+  box-shadow: inset 0px 0px 8px #999, inset 0 0 2px #ffffff;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-repeat: no-repeat;
+  border-radius: 7px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.form:hover{
+    box-shadow: inset 0px 0px 16px #999, inset 0 0 4px #ffffff;
+}
+.form h5 {
+  font-size: 22px;
+  color: #fff;
+}
+
+.submit {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 14px;
+  row-gap: 4px;
+}
+
+.input {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  margin-top: 4px;
+}
+.input label {
+  font-size: 10px;
+  color: #f5f7f7;
+}
+.input input {
+  width: 60%;
+  border-radius: 4px;
+  padding: 4px;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  transition: animation 0.3s ease-in-out;
+  color: #fff;
+  caret-color: #596d48;
+}
+
+.input input:focus {
+  outline: 0.5px solid blue;
+  border: 0.5px solid blue;
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+#theLabel {
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+.right button, .left button {
+  background-color: #596d48;
+  width: 160px;
+  margin-left: 40px;
+  margin-top: 40px;
+  padding: 10px 15px;
+  border-radius: 7px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 17px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.right button:disabled {
+  background-color: #7f8877;
+  cursor: not-allowed;
+}
+
+.right h4 {
+  font-size: 20px;
+  display: flex;
+  gap: 4px;
+  margin-top: 20px;
+  color: #fff;
+  margin-left: 40px;
+}
+.right h4 a {
+  text-decoration: none;
+  color: greenyellow;
+}
+
+@media screen and (max-width: 950px) {
+  .main {
+    height: max-content;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+  .left {
+    width: 100%;
+    height: 50%;
+    padding: 10px 0 10px 0;
+  }
+
+
+
+  
+  .right {
+    width: 90%;
+    height: 100vh;
+    padding: 10px 5px;
+    
+    
+  }
+  .right p {
+    margin: 20px;
+    width: 90%;
+    text-align: justify;
+  }
+  .right p:first-child{
+    margin-top: 10px;
+  }
+  .form {
+    height: max-content;
+    width: 99%;
+    margin-left: 2px;
+}
+.submit {
+      padding: 5px;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
+
+  .input input{
+    width: 80%;
+    padding: 6px;
+  }
+}

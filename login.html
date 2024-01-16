@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup Form</title>
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,38 +29,20 @@
       <div class="right">
         <p>
           This is not a real online service! You know you need something like
-          this in your life to help you realize your deepest dreams. Sign up now
-          and get started.
+          this in your life to help you realize your deepest dreams.Log in now
+          and carry on.
         </p>
         <p>You know what you want to.</p>
         <div class="form" action="">
           <h5>Let's do this!</h5>
           <form id="submit" class="submit">
             <div class="input">
-              <label for="firstName">FIRST NAME</label>
-              <input
-                required
-                type="text"
-                autocomplete="username"
-                id="firstName"
-              />
-            </div>
-            <div class="input">
-              <label for="lastName">LAST NAME</label>
-              <input
-                required
-                type="text"
-                autocomplete="username"
-                id="lastName"
-              />
-            </div>
-            <div class="input">
               <label for="email">EMAIL</label>
-              <input required type="email" autocomplete="username" id="email" />
+              <input type="email" autocomplete="username" id="email" />
             </div>
             <div class="input">
               <label for="phone">PHONE NUMBER</label>
-              <input required type="tel" id="phone" />
+              <input type="tel" id="phone" />
             </div>
             <div class="input">
               <label for="password">PASSWORD</label>
@@ -60,30 +50,17 @@
                 type="password"
                 autocomplete="new-password"
                 id="password"
-                required
-                
-              />
-              <label id="theLabel" style="display: none" for=""
-                ></label
-              >
-            </div>
-            <div class="input">
-              <label for="confirmPassword">CONFIRM PASSWORD</label>
-              <input
-                type="password"
-                autocomplete="new-password"
-                id="confirmPassword"
-                required
               />
             </div>
           </form>
         </div>
-        <button form="submit" disabled id="create" type="submit">
-          Create Account
-        </button>
-        <h4>Already have an account? <a href="/login.html">Log in</a></h4>
+        <button form="submit" id="login" type="submit">Log In</button>
+        <h4>Don't have an account? <a href="/index.html">Sign up</a></h4>
       </div>
     </section>
     <script src="/main.js"></script>
   </body>
+</html>
+
+</body>
 </html>
